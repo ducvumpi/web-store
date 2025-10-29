@@ -1,7 +1,28 @@
 "use client";
 import feather from "feather-icons";
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import { loginUser, getProfile, LoginData, LoginSchema } from "../api/loginAPI";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { Button, TextField } from "@mui/material";
+import { Controller, useForm } from "react-hook-form";
 export default function LoginPage() {
+  const router = useRouter();
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<LoginData>({
+    resolver: yupResolver(LoginSchema),
+  });
+  const onSubmit = async (data: LoginData) => {
+    const result = await loginUser(data.email, data.password);
+    if (result.access_token) {
+      router.push("./products");
+      alert("Đăng nhập thành công");
+    }
+  };
+
   useEffect(() => {
     feather.replace();
   }, []);
@@ -13,37 +34,48 @@ export default function LoginPage() {
             Chào mừng trở lại
           </h1>
 
-          <form className="space-y-6">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div>
               <label
                 htmlFor="email"
                 className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                placeholder="your@email.com"
+              ></label>
+              <Controller
+                name="email"
+                defaultValue=""
+                control={control}
+                render={({ field }) => (
+                  <TextField
+                    {...field}
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    label="Nhập email của bạn"
+                    error={!!errors.email}
+                    helperText={errors.email?.message}
+                  />
+                )}
               />
             </div>
-
             <div>
               <label
                 htmlFor="password"
                 className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Password
-              </label>
-              <input
-                type="password"
-                id="password"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                placeholder="••••••••"
+              ></label>
+              <Controller
+                name="password"
+                defaultValue=""
+                control={control}
+                render={({ field }) => (
+                  <TextField
+                    {...field}
+                    type="password"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    label="Nhập mật khẩu của bạn"
+                    error={!!errors.password}
+                    helperText={errors.password?.message}
+                  />
+                )}
               />
             </div>
-
             <div className="flex items-center justify-between">
               <div className="flex items-center">
                 <input
@@ -67,12 +99,12 @@ export default function LoginPage() {
               </a>
             </div>
 
-            <button
-              type="submit"
+            <Button
               className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-lg font-medium hover:opacity-90 transition"
+              type="submit"
             >
               Đăng nhập
-            </button>
+            </Button>
           </form>
 
           <div className="mt-6 text-center">

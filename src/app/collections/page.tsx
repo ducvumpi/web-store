@@ -40,6 +40,7 @@ export default function CollectionsPage() {
               <Image
                 width={1200}
                 height={630}
+                unoptimized
                 src={formatImageUrl(collection.image)}
                 alt="Summer Collection"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform"

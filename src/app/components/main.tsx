@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useEffect } from "react";
 import feather from "feather-icons";
+import Link from "next/link";
 
 export default function Main() {
   useEffect(() => {
@@ -61,12 +62,12 @@ export default function Main() {
                 <p className="text-gray-200 mb-4">
                   Bright colors for sunny days
                 </p>
-                <a
-                  href="#"
+                <Link
+                  href="/collections"
                   className="text-white font-medium flex items-center gap-2"
                 >
                   Explore <i data-feather="arrow-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
 
