@@ -12,7 +12,7 @@ export const LoginSchema = yup.object().shape({
     .required("Vui lòng nhập email"),
   password: yup
     .string()
-    .min(5, "Số lượng ký tự không quá 5")
+    .min(1, "Số lượng ký tự không quá 5")
     .required("Vui lòng nhập mật khẩu"),
 });
 
@@ -24,9 +24,13 @@ const GetAPI = axios.create({
   },
 });
 export async function loginUser(email: string, password: string) {
-  await LoginSchema.validate({ email, password }, { abortEarly: false });
-  const response = await GetAPI.post("/login", { email, password });
-  return response.data;
+  try {
+    await LoginSchema.validate({ email, password }, { abortEarly: false });
+    const response = await GetAPI.post("/login", { email, password });
+    return response.data;
+  } catch {
+    alert("Tài khoản hoặc mật khẩu không đúng ");
+  }
 }
 export async function getProfile(token: string) {
   const response = await GetAPI.get("/profile", {

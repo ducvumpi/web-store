@@ -1,13 +1,14 @@
 "use client";
 import feather from "feather-icons";
-import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { loginUser, getProfile, LoginData, LoginSchema } from "../api/loginAPI";
+import { LoginData, LoginSchema } from "../api/loginAPI";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Button, TextField } from "@mui/material";
 import { Controller, useForm } from "react-hook-form";
+import { useAuth } from "../context/isLoggedIn";
 export default function LoginPage() {
-  const router = useRouter();
+  const { onSubmit } = useAuth();
+
   const {
     control,
     handleSubmit,
@@ -15,13 +16,6 @@ export default function LoginPage() {
   } = useForm<LoginData>({
     resolver: yupResolver(LoginSchema),
   });
-  const onSubmit = async (data: LoginData) => {
-    const result = await loginUser(data.email, data.password);
-    if (result.access_token) {
-      router.push("./products");
-      alert("Đăng nhập thành công");
-    }
-  };
 
   useEffect(() => {
     feather.replace();
@@ -98,7 +92,7 @@ export default function LoginPage() {
                 Quên mật khẩu?
               </a>
             </div>
-
+            {}
             <Button
               className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-lg font-medium hover:opacity-90 transition"
               type="submit"
