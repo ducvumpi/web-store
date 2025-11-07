@@ -2,11 +2,17 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Handbag, HomeIcon, InfoIcon, StoreIcon } from "lucide-react";
-import { useAuth } from "../context/isLoggedIn";
-export default function Navbar() {
-  const { isLoggedIn, logout } = useAuth();
-  if (isLoggedIn === null) return null;
+import { useAuthStore } from "../context/isLoggedIn";
+import { useRouter } from "next/navigation";
 
+export default function Navbar() {
+  const router = useRouter();
+  const { isLoggedIn, logout } = useAuthStore();
+  if (isLoggedIn === null) return null;
+  const handleLogOut = () => {
+    logout();
+    router.push("/collections");
+  };
   return (
     <>
       {" "}
@@ -71,8 +77,8 @@ export default function Navbar() {
               </button>
             </div>
             <button
-              onClick={logout}
-              className="bg-red-500 text-white px-3 py-1 rounded"
+              onClick={handleLogOut}
+              className="bg-red-500 cursor-pointer text-white px-3 py-1 rounded"
             >
               Đăng xuất
             </button>

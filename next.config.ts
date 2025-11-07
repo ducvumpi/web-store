@@ -9,6 +9,7 @@ const nextConfig = {
       "cdn.brvn.vn",
       "placehold.co",
       "www.string.com",
+      "agb9whbfcr.ucarecd.net",
     ], // ✅ thêm domain ở đây
   },
 };

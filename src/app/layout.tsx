@@ -3,8 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
-import { AuthProvider } from "./context/isLoggedIn";
-
+import { Toaster } from "react-hot-toast";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -30,12 +29,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <AuthProvider>
-          <Navbar />
-          <div className="overlay"></div>
-          {children}
-        </AuthProvider>
+        <Navbar />
+        <div className="overlay"></div>
+        {children}
         <Footer />
+        <Toaster position="top-right" reverseOrder={false} />
       </body>
     </html>
   );

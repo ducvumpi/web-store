@@ -22,9 +22,7 @@ export default function Main() {
             alt="Background GIF"
             className="absolute inset-0 w-full h-full object-cover"
           />
-
           <div className="absolute inset-0 bg-opacity-40"></div>
-
           <div className="relative z-10 min-h-[500px] flex flex-col justify-center items-center text-center px-8 text-white">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               Tiệm Mùa Chậm
@@ -40,7 +38,6 @@ export default function Main() {
             </a>
           </div>
         </section>
-
         <section id="collections" className="mb-20">
           <h2 className="text-3xl font-bold mb-10 text-center">
             New Collections
@@ -70,7 +67,6 @@ export default function Main() {
                 </Link>
               </div>
             </div>
-
             <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition">
               <Image
                 width={1200}
@@ -93,7 +89,6 @@ export default function Main() {
                 </a>
               </div>
             </div>
-
             <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition">
               <Image
                 width={1200}
@@ -118,7 +113,6 @@ export default function Main() {
             </div>
           </div>
         </section>
-
         <section className="mb-20">
           <h2 className="text-3xl font-bold mb-10 text-center">
             Shop by Category
@@ -176,7 +170,6 @@ export default function Main() {
             </a>
           </div>
         </section>
-
         <section className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl p-10 text-white mb-20">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>

@@ -9,7 +9,7 @@ function formatImageUrl(url: string) {
   return `https://${url}`;
 }
 
-export default async function CollectionDetailPage({
+export async function CollectionDetailPage({
   params,
 }: {
   params: { slug: string };

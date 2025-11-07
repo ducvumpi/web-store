@@ -5,9 +5,10 @@ import { LoginData, LoginSchema } from "../api/loginAPI";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Button, TextField } from "@mui/material";
 import { Controller, useForm } from "react-hook-form";
-import { useAuth } from "../context/isLoggedIn";
+import { useAuthStore } from "../context/isLoggedIn";
+import { useRouter } from "next/navigation";
 export default function LoginPage() {
-  const { onSubmit } = useAuth();
+  const { onSubmit } = useAuthStore();
 
   const {
     control,
@@ -16,7 +17,13 @@ export default function LoginPage() {
   } = useForm<LoginData>({
     resolver: yupResolver(LoginSchema),
   });
-
+  const router = useRouter();
+  const handleLogin = async (data: LoginData) => {
+    await onSubmit(data);
+    if (useAuthStore.getState().isLoggedIn) {
+      router.push("/");
+    }
+  };
   useEffect(() => {
     feather.replace();
   }, []);
@@ -28,7 +35,7 @@ export default function LoginPage() {
             Chào mừng trở lại
           </h1>
 
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          <form onSubmit={handleSubmit(handleLogin)} className="space-y-6">
             <div>
               <label
                 htmlFor="email"
