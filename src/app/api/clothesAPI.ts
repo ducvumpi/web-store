@@ -5,7 +5,7 @@ export interface Clothes {
   title?: string;
   price?: number;
   description?: string;
-  category?: {
+  category: {
     id: number;
     name: string;
     image: string;
