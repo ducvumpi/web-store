@@ -9,10 +9,10 @@ export default function WomenPage() {
   return (
     <main className="container mx-auto px-4 py-12">
       <div className="mb-12">
-        <h1 className="text-4xl font-bold mb-4">{"Women's Fashion"}</h1>
+        <h1 className="text-4xl font-bold mb-4">{"Thời trang Nữ"}</h1>
         <div className="flex flex-wrap justify-between items-center">
           <p className="text-xl text-gray-600">
-            Elegant styles for every woman
+            Phong cách thanh lịch dành cho mọi phụ nữ
           </p>
           <div className="flex gap-4 mt-4 sm:mt-0">
             <button className="bg-gray-100 px-4 py-2 rounded-lg">Lọc</button>
@@ -81,13 +81,13 @@ export default function WomenPage() {
 
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold mb-6">
-          Looking for outfit inspiration?
+          Bạn đang tìm cảm hứng cho trang phục?
         </h2>
         <a
           href="/women-lookbook.html"
           className="inline-block bg-gray-900 text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition"
         >
-          View Lookbook
+          Xem Lookbook
         </a>
       </div>
     </main>

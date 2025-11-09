@@ -23,12 +23,11 @@ export default function CollectionsPage() {
 
   return (
     <div className="bg-[#F8F5EF]">
-      <main className="container mx-auto px-4">
+      <main className="container mx-auto px-4 pb-[70px] pt-[30px]">
         <div className="mb-12 text-center">
-          <h1 className="text-4xl font-bold mb-4">Our Collections</h1>
+          <h1 className="text-4xl font-bold mb-4 ">Bộ Sưu Tập</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Discover our carefully curated fashion collections for every season
-            and occasion
+            Khám phá những bộ sưu tập thời trang được tuyển chọn kỹ lưỡng của chúng tôi cho mọi mùa và mọi dịp
           </p>
         </div>
 
@@ -54,7 +53,8 @@ export default function CollectionsPage() {
                   href={`/collections/${collection.slug}`}
                   className="mt-4 inline-block bg-white text-black px-6 py-2 rounded-full font-medium hover:bg-opacity-90 transition"
                 >
-                  View Collection
+                  Xem Bộ sưu tập
+
                 </a>
               </div>
             </div>
@@ -63,13 +63,14 @@ export default function CollectionsPage() {
 
         <div className="text-center mt-12">
           <h2 className="text-2xl font-bold mb-6">
-            {"Can't find what you're looking for?"}
+            {"Không tìm thấy thông tin bạn đang tìm kiếm?"}
           </h2>
           <a
             href="/contact.html"
             className="inline-block bg-gray-900 text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition"
           >
-            Contact Our Stylists
+            Liên hệ với nhà tạo mẫu của chúng tôi
+
           </a>
         </div>
       </main>

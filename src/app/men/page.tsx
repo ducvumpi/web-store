@@ -27,16 +27,17 @@ export default function MenPage() {
     <div className="bg-[#F8F5EF]">
       <main className="container mr-auto ml-auto px-4 py-12">
         <div className="mb-12">
-          <h1 className="text-4xl font-bold mb-4">{"Men's Fashion"}</h1>
+          <h1 className="text-4xl font-bold mb-4">{"Thời trang Nam"}</h1>
           <div className="flex flex-wrap justify-between items-center">
             <p className="text-xl text-gray-600">
-              Stylish looks for every occasion
+              Phong cách thời trang cho mọi dịp
+
             </p>
             <div className="flex gap-4 mt-4 sm:mt-0">
               <button className="bg-gray-100 px-4 py-2 rounded-lg">
-                Filter
+                Lọc
               </button>
-              <button className="bg-gray-100 px-4 py-2 rounded-lg">Sort</button>
+              <button className="bg-gray-100 px-4 py-2 rounded-lg">Sắp xếp</button>
             </div>
           </div>
         </div>
@@ -77,13 +78,13 @@ export default function MenPage() {
 
         <div className="mt-16 text-center">
           <h2 className="text-2xl font-bold mb-6">
-            Need help finding your style?
+            Bạn cần trợ giúp để tìm phong cách của mình?
           </h2>
           <a
             href="/men-style-guide.html"
             className="inline-block bg-gray-900 text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition"
           >
-            View Style Guide
+            Xem hướng dẫn về phong cách
           </a>
         </div>
       </main>

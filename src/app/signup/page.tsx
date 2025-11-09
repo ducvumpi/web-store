@@ -139,7 +139,7 @@ export default function SignUpPage() {
 
           <div className="mt-8 pt-8 border-t border-gray-200">
             <p className="text-sm text-gray-500 text-center mb-4">
-              Hoặc đăng nhập với 
+              Hoặc đăng nhập với  
             </p>
             <div className="flex gap-4 justify-center">
               <a

@@ -1,6 +1,6 @@
 "use client";
 import feather from "feather-icons";
-import { useEffect } from "react";
+import { useEffect, } from "react";
 export default function Footer() {
   useEffect(() => {
     feather.replace();
@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="footer-about">
           <div className="footer-logo">Tiệm Mùa Chậm</div>
           <p className="footer-description">
-            Your destination for the latest fashion trends and styles.
+            Điểm đến của bạn cho những xu hướng và phong cách thời trang mới nhất.
           </p>
           <div className="footer-social">
             <a href="#">
@@ -28,64 +28,72 @@ export default function Footer() {
             </a>
           </div>
         </div>
-
         <div className="footer-links">
           <h3>Shop</h3>
           <ul>
             <li>
-              <a href="/men.html">{"Men's Clothing"}</a>
+              <a href="/men.html">{"Thời trang nam"}</a>
             </li>
             <li>
-              <a href="/women.html">{"Women's Clothing"}</a>
+              <a href="/women.html">{"Thời trang Nữ"}</a>
             </li>
             <li>
-              <a href="/accessories.html">Accessories</a>
+              <a href="/accessories.html">Phụ kiện
+
+              </a>
             </li>
             <li>
-              <a href="/footwear.html">Footwear</a>
+              <a href="/footwear.html">Giày dép
+              </a>
             </li>
           </ul>
         </div>
-
-        <div className="footer-links">
-          <h3>Help</h3>
+        <div className="footer-links" >
+          <h3>Hỗ trợ</h3>
           <ul>
             <li>
               <a href="/faq.html">FAQ</a>
             </li>
             <li>
-              <a href="/shipping.html">Shipping & Returns</a>
+              <a href="/shipping.html">Vận chuyển & Trả hàng
+              </a>
             </li>
             <li>
-              <a href="/size-guide.html">Size Guide</a>
+              <a href="/size-guide.html">
+                Hướng dẫn chọn kích thước</a>
             </li>
             <li>
-              <a href="/contact.html">Contact Us</a>
+              <a href="/contact.html">Liên hệ với chúng tôi
+              </a>
             </li>
           </ul>
         </div>
 
         <div className="footer-links">
-          <h3>Company</h3>
+          <h3>Công ty
+          </h3>
           <ul>
             <li>
-              <a href="/about.html">About Us</a>
+              <a href="/about.html">Về chúng tôi
+              </a>
             </li>
             <li>
               <a href="/blog.html">Blog</a>
             </li>
             <li>
-              <a href="/careers.html">Careers</a>
+              <a href="/careers.html">Nghề nghiệp
+              </a>
             </li>
             <li>
-              <a href="/privacy.html">Privacy Policy</a>
+              <a href="/privacy.html">Chính sách bảo mật
+              </a>
             </li>
           </ul>
         </div>
       </div>
 
       <div className="footer-bottom">
-        &copy; {new Date().getFullYear()} FashionFiesta. All rights reserved.
+        &copy; {new Date().getFullYear()} Tiệm mùa chậm. Bản quyền thuộc về Tiệm mùa chậm.
       </div>
     </div>
   );
