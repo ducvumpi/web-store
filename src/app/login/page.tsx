@@ -101,8 +101,9 @@ export default function LoginPage() {
             </div>
             {}
             <Button
-              className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-lg font-medium hover:opacity-90 transition"
+              className="w-full bg-gradient-to-r from-purple-500 to-pink-500 py-3 rounded-lg font-medium hover:opacity-90 transition"
               type="submit"
+              style={{color:"white"}}
             >
               Đăng nhập
             </Button>

@@ -10,7 +10,7 @@ export default function SignUpPage() {
       <main className="containersignup mx-auto px-4 py-20 max-w-md">
         <div className="bg-white p-8 rounded-2xl shadow-lg">
           <h1 className="text-3xl font-bold text-center mb-8">
-            Create your account
+            Đăng ký tài khoản
           </h1>
 
           <form className="space-y-6">
@@ -20,7 +20,7 @@ export default function SignUpPage() {
                   htmlFor="first-name"
                   className="block text-sm font-medium text-gray-700 mb-1"
                 >
-                  First name
+                  Họ
                 </label>
                 <input
                   type="text"
@@ -34,7 +34,7 @@ export default function SignUpPage() {
                   htmlFor="last-name"
                   className="block text-sm font-medium text-gray-700 mb-1"
                 >
-                  Last name
+                  Tên
                 </label>
                 <input
                   type="text"
@@ -100,19 +100,19 @@ export default function SignUpPage() {
                 htmlFor="terms"
                 className="ml-2 block text-sm text-gray-700"
               >
-                I agree to the{" "}
+                Tôi đồng ý với các{" "}
                 <a
                   href="/terms.html"
                   className="text-purple-500 hover:text-purple-700"
                 >
-                  Terms
+                  Điều khoản
                 </a>{" "}
-                and{" "}
+                và{" "}
                 <a
                   href="/privacy.html"
                   className="text-purple-500 hover:text-purple-700"
                 >
-                  Privacy Policy
+                  Chính sách bảo mật
                 </a>
               </label>
             </div>
@@ -121,25 +121,25 @@ export default function SignUpPage() {
               type="submit"
               className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-lg font-medium hover:opacity-90 transition"
             >
-              Create account
+              Đăng ký tài khoản
             </button>
           </form>
 
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-500">
-              Already have an account?
+              Bạn đã có tài khoản?
               <a
                 href="/login.html"
                 className="text-purple-500 hover:text-purple-700 font-medium"
               >
-                Sign in
+                Đăng nhập
               </a>
             </p>
           </div>
 
           <div className="mt-8 pt-8 border-t border-gray-200">
             <p className="text-sm text-gray-500 text-center mb-4">
-              Or sign up with
+              Hoặc đăng nhập với 
             </p>
             <div className="flex gap-4 justify-center">
               <a
