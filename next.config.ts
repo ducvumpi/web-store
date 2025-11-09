@@ -10,6 +10,7 @@ const nextConfig = {
       "placehold.co",
       "www.string.com",
       "agb9whbfcr.ucarecd.net",
+      "web-store-red.vercel.app"
     ], // ✅ thêm domain ở đây
   },
 };
