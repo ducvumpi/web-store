@@ -31,7 +31,7 @@ export default function Main() {
               Một nơi “dừng lại giữa cuộc sống vội vàng”
             </p>
             <a
-              href="#collections"
+              href="/collections"
               className="bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition"
             >
               Shop Now
@@ -40,7 +40,8 @@ export default function Main() {
         </section>
         <section id="collections" className="mb-20">
           <h2 className="text-3xl font-bold mb-10 text-center">
-            New Collections
+            Bộ Sưu Tập Mới
+
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition">
@@ -115,7 +116,8 @@ export default function Main() {
         </section>
         <section className="mb-20">
           <h2 className="text-3xl font-bold mb-10 text-center">
-            Shop by Category
+            Mua Sắm Theo Danh Mục
+
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <a href="#" className="group">
@@ -172,10 +174,11 @@ export default function Main() {
         </section>
         <section className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl p-10 text-white mb-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
+            <h2 className="text-3xl font-bold mb-4">Cập nhật hàng ngày
+            </h2>
             <p className="text-xl mb-8">
-              Subscribe to our newsletter for the latest trends and exclusive
-              offers
+              Đăng ký nhận bản tin của chúng tôi để cập nhật những xu hướng mới nhất và ưu đãi độc quyền
+
             </p>
             <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
               <input
@@ -187,7 +190,7 @@ export default function Main() {
                 type="submit"
                 className="bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition"
               >
-                Subscribe
+                Đăng ký ngay
               </button>
             </form>
           </div>
