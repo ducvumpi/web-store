@@ -16,6 +16,7 @@ export default function CollectionsPage() {
     async function LoadCollections() {
       const data: Collection[] = await fetchCollections();
       setCollections(data);
+      console.log("data", data);
     }
     LoadCollections();
   }, []);

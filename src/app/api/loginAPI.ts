@@ -10,6 +10,7 @@ export type UserData = {
 export type LoginData = {
   email: string;
   password: string;
+  role?: "user" | "admin";
 };
 export const LoginSchema = yup.object().shape({
   email: yup
