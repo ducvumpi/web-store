@@ -30,8 +30,10 @@ export async function loginUser({ email, password }: LoginData) {
   try {
     await LoginSchema.validate({ email, password }, { abortEarly: false });
     const response = await GetAPI.post("/login", { email, password });
-    return response.data;
-  } catch {}
+    console.log("loginUser", response)
+
+    return response.data.access_token;
+  } catch { }
 }
 export async function getProfile(token: string) {
   const response = await GetAPI.get("/profile", {

@@ -1,5 +1,4 @@
 import Main from "./components/main";
-
 export default function Home() {
   return (
     <div className="bg-[#F8F5EF]">

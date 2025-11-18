@@ -15,11 +15,11 @@ export default async function CollectionDetailPage({
   params: { slug: string };
 }) {
   const collection = await fetchCollectionBySlug(params.slug);
+  console.log("check slug", collection)
 
   if (!collection) {
     return <h1>Không tìm thấy bộ sưu tập</h1>;
   }
-
   return (
     <div className="flex pb-16 px-8 bg-background min-h-screen">
       <main className="container mx-auto ">

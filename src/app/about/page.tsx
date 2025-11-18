@@ -15,7 +15,7 @@ export default function AboutPage() {
           <div className="absolute bottom-0 left-0 right-0 p-10 text-white">
             <h1 className="text-5xl font-bold mb-4">Câu chuyện của chúng tôi</h1>
             <p className="text-xl max-w-2xl">
-              Khám phá niềm đam mê đằng sau Tiệm mùa chậm            </p>
+              Khám phá niềm đam mê đằng sau Tiệm mùa chậm</p>
           </div>
         </section>
 

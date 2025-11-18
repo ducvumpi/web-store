@@ -45,12 +45,15 @@ export default function Navbar() {
             <InfoIcon className="w-5 h-5 text-gray-600" />
             Giới thiệu
           </Link>
+          <Link href="/search.html">
+            <i data-feather="search"></i>
+          </Link>
+          <Link href="/cart">
+            <i data-feather="shopping-bag"></i>
+          </Link>
         </div>
         {!isLoggedIn ? (
           <div className="nav-actions">
-            <a href="/search.html">
-              <i data-feather="search"></i>
-            </a>
             <div className="auth-buttons">
               <a href="/login" className="auth-btn login-btn">
                 Đăng nhập
@@ -63,15 +66,11 @@ export default function Navbar() {
         ) : (
           <>
             <div className="flex flex-gap">
-              <a href="/search.html">
-                <i data-feather="search"></i>
-              </a>
+
               <a href="/account">
                 <i data-feather="user"></i>
               </a>
-              <a href="/cart">
-                <i data-feather="shopping-bag"></i>
-              </a>
+
               <button className="mobile-menu-btn">
                 <i data-feather="menu"></i>
               </button>

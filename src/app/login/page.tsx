@@ -99,11 +99,11 @@ export default function LoginPage() {
                 Quên mật khẩu?
               </a>
             </div>
-            {}
+            { }
             <Button
               className="w-full bg-gradient-to-r from-purple-500 to-pink-500 py-3 rounded-lg font-medium hover:opacity-90 transition"
               type="submit"
-              style={{color:"white"}}
+              style={{ color: "white" }}
             >
               Đăng nhập
             </Button>

@@ -25,22 +25,25 @@ export const useAuthStore = create<AuthContextType>()(
       setIsLoggedIn: (value) => set({ isLoggedIn: value }),
       onSubmit: async ({ email, password }: LoginData) => {
         const result = await loginUser({ email, password });
-        if (result.access_token) {
-          sessionStorage.setItem("access_token", result.access_token);
+        if (result) {
+          sessionStorage.setItem("access_token", result);
           set({ isLoggedIn: true });
           toast.success("Đăng nhập thành công");
         } else {
           toast.error("Tài khoản hoặc mật khẩu không đúng");
         }
+        console.log("result", result)
       },
       logout() {
         set({ isLoggedIn: false });
         toast.error("Tài khoản đã đăng xuất");
       },
     }),
+
     {
       name: "auth_context",
     }
+
   )
 );
 // const AuthContext = createContext<AuthContextType | null>(null);
